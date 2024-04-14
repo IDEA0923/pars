@@ -40,6 +40,15 @@ int pars_text(string a, string b){
     }
     return num;
 }
+class text{
+    public:
+    string text;
+    int weigh;
+    text(string a){
+        this->text = a;
+        this->weigh = a.size();
+    }
+}
 class pars1{
         string n;
         string last_str;
@@ -55,3 +64,18 @@ class pars1{
             }while(!read.eof());
         }
 };
+class pars_with_punctuation_marks{
+        string p_m = ",.?!^*()-+";
+    public:
+        void pars(string a){
+            text t(a);
+            int p_w = p_m.size();
+            for(int b = 0;b<t.weigh;b++){
+                for(int c = 0 ;c<p_w;c++){
+                    if(t.text[b]==p_m[c]){
+                        if()
+                    }
+                }
+            }
+        }
+}
