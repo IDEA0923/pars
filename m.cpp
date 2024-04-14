@@ -12,6 +12,7 @@ int main(){
     cout<<"what you wand do:"<<endl;
     cout<<"     1.frequency analysis"<<endl;
     cout<<"     2.text parsing"<<endl;
+    cout<<"     3.pars about punctuation marks"<<endl;
     cout<<"$ : ";
     cin>>v;
     for(int a = 0;a<10;a++){
@@ -19,16 +20,20 @@ int main(){
     }cout<<"-"<<endl;
     pizda pzd(text);
     pars1 p;
+    pars_with_punctuation_marks pars_pm;
     switch(v){
-        case 1: 
+        case 1:{ 
                 pzd.anal1();
-                break;
-        case 2:
+                break;}
+        case 2:{
                 string txt;
                 cout<<"input name file:"<<endl;
                 cin>>txt;
                 p.sr1(txt,text);
-                break;
+                break;}
+        case 3:{
+                pars_pm.pars(text);
+                break;}
     }
     return 0;
 }

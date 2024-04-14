@@ -5,7 +5,7 @@
 using namespace std;
 void dash(int a){
     for(int b = 1;b<a;b++){
-        cout<<"-"
+        cout<<"-";
     }
     cout<<"-"<<endl;
 }
@@ -47,13 +47,13 @@ int pars_text(string a, string b){
 }
 class text{
     public:
-    string text;
+    string txt;
     int weigh;
     text(string a){
-        this->text = a;
+        this->txt = a;
         this->weigh = a.size();
     }
-}
+};
 class pars1{
         string n;
         string last_str;
@@ -113,11 +113,11 @@ class pars_with_punctuation_marks{
             
             for(int b = 0;b<t.weigh;b++){
                 for(int c = 0 ;c<p_w;c++){
-                    if(t.text[b]==p_m[c]){
-                        if(t.text[b-1] == space &&t.text[b+1] == space){num_p1[c] =num_p1[c] +1;
-                        }else if(t.text[b-1] != space &&t.text[b+1] == space){num_p2[c] =num_p2[c] +1;
-                        }else if(t.text[b-1] == space &&t.text[b+1] != space){num_p3[c] =num_p3[c] +1;
-                        }else if(t.text[b-1] != space &&t.text[b+1] != space){num_p4[c] =num_p4[c] +1;
+                    if(t.txt[b]==p_m[c]){
+                        if(t.txt[b-1] == space &&t.txt[b+1] == space){num_p1[c] =num_p1[c] +1;
+                        }else if(t.txt[b-1] != space &&t.txt[b+1] == space){num_p2[c] =num_p2[c] +1;
+                        }else if(t.txt[b-1] == space &&t.txt[b+1] != space){num_p3[c] =num_p3[c] +1;
+                        }else if(t.txt[b-1] != space &&t.txt[b+1] != space){num_p4[c] =num_p4[c] +1;
                         }else{cout<<"ERROR:invalid pars 84"<<endl;}
                     }
                 }
