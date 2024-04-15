@@ -1,4 +1,4 @@
-//this programm was created by IDEA
+//this programm was created by IDEA0923
 #include <iostream>
 #include "co.h"
 #include "pars_text1.h"

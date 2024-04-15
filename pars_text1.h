@@ -72,34 +72,35 @@ class pars1{
 class pars_with_punctuation_marks{
         string p_m = ",.?!^*()-+";
         int p_w = p_m.size();
+        //////////////////////////////
         int * num_p1 = new int [p_w];
         int * num_p2 = new int [p_w];
         int * num_p3 = new int [p_w];
         int * num_p4 = new int [p_w];
         char space = ' ';
         int sum4(){
-            int y;
+            int y = 0;
             for (int a = 0;a<p_w;a++){
                 y = y+ num_p4[a];
             }
             return y;
         }
         int sum3(){
-            int y;
+            int y = 0;
             for (int a = 0;a<p_w;a++){
                 y = y+ num_p3[a];
             }
             return y;
         }
         int sum2(){
-            int y;
+            int y = 0;
             for (int a = 0;a<p_w;a++){
                 y = y+ num_p2[a];
             }
             return y;
         }
         int sum1(){
-            int y;
+            int y = 0;
             for (int a = 0;a<p_w;a++){
                 y = y+ num_p1[a];
             }
@@ -114,10 +115,10 @@ class pars_with_punctuation_marks{
             for(int b = 0;b<t.weigh;b++){
                 for(int c = 0 ;c<p_w;c++){
                     if(t.txt[b]==p_m[c]){
-                        if(t.txt[b-1] == space &&t.txt[b+1] == space){num_p1[c] =num_p1[c] +1;
-                        }else if(t.txt[b-1] != space &&t.txt[b+1] == space){num_p2[c] =num_p2[c] +1;
-                        }else if(t.txt[b-1] == space &&t.txt[b+1] != space){num_p3[c] =num_p3[c] +1;
-                        }else if(t.txt[b-1] != space &&t.txt[b+1] != space){num_p4[c] =num_p4[c] +1;
+                        if(t.txt[b-1] == space &&t.txt[b+1] == space){cout<<num_p1[c]<<endl;num_p1[c] =num_p1[c] +1;continue;
+                        }else if(t.txt[b-1] != space &&t.txt[b+1] == space){num_p2[c] =num_p2[c] +1;continue;
+                        }else if(t.txt[b-1] == space &&t.txt[b+1] != space){num_p3[c] =num_p3[c] +1;continue;
+                        }else if(t.txt[b-1] != space &&t.txt[b+1] != space){num_p4[c] =num_p4[c] +1;continue;
                         }else{cout<<"ERROR:invalid pars 84"<<endl;}
                     }
                 }
@@ -126,8 +127,8 @@ class pars_with_punctuation_marks{
             dash(5);
             cout<<"conclusion"<<endl;
             dash(5);
-            cout<<"User used :";
-            cout<<"     doesn't space punctuation marks "<<sum4()<<endl;
+            cout<<"User used :"<<endl;
+            cout<<"     doesn't space punctuation marks : "<<sum4()<<endl;
             cout<<"     space before puncruation marks : "<<sum3()<<endl;
             cout<<"     space after punctuation marks : "<<sum2()<<endl;
             cout<<"     space before and after punctuation mark : "<<sum1()<<endl;
