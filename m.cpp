@@ -15,9 +15,7 @@ int main(){
     cout<<"     3.pars about punctuation marks"<<endl;
     cout<<"$ : ";
     cin>>v;
-    for(int a = 0;a<10;a++){
-        cout<<"-";
-    }cout<<"-"<<endl;
+    dash(10);
     pizda pzd(text);
     pars1 p;
     pars_with_punctuation_marks pars_pm;
