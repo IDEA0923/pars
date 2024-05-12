@@ -31,9 +31,9 @@ class pizda{
                     for(int b= 0;b<n_m_s;b++){
                         if(ch[sim_mass[a]]<ch[sim_mass[b]]){
                             per++;
-                            buf = ch[sim_mass[a]];
-                            ch[sim_mass[a]] = ch[sim_mass[b]];
-                            ch[sim_mass[b]] = buf;
+                            buf = sim_mass[a];
+                            sim_mass[a] = sim_mass[b];
+                            sim_mass[b]= buf;
                         }
                     }
                     if(per == 0){
